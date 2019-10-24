@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">UserForm</string>
+
+    <!--User Input Screen-->
+
+    <string name="label_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_email">Email</string>
+    <string name="hint_first_name">Enter First Name</string>
+    <string name="hint_last_name">Enter Last Name</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="submit">Submit</string>
+
+    <string name="alert_title">Error</string>
+    <string name="alert_btn_ok">OK</string>
+
+    <string name="form_validation_success">Form submitted successfully</string>
+
+</resources>

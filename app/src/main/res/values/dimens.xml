@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="userinput_top_space">164dp</dimen>
+    <dimen name="userinput_start_space">40dp</dimen>
+    <dimen name="userinput_end_space">40dp</dimen>
+    <dimen name="userinput_bt_et_lb">20dp</dimen>
+    <dimen name="userinput_bt_lb_et">10dp</dimen>
+    <dimen name="userinput_bt_et_btn">80dp</dimen>
+
+</resources>
