@@ -9,10 +9,13 @@ import kotlinx.android.synthetic.main.activity_user_form.*
 
 class UserFormActivity : AppCompatActivity(), UserFormView {
 
-    override fun onSuccess() {
+    // For success of Form validation
 
+    override fun onSuccess() {
         showPopup(getString(R.string.alert_success_title), getString(R.string.form_validation_success))
     }
+
+    // For showing the validation errors in popup
 
     override fun onFailure(errorMsg:String) {
 
@@ -28,6 +31,8 @@ class UserFormActivity : AppCompatActivity(), UserFormView {
         initialzeUI()
     }
 
+    //For initializing the UI views
+
     private fun initialzeUI() {
 
         userFormPresenter = UserFormPresenterImpl.getNewInstance(this)
@@ -37,6 +42,8 @@ class UserFormActivity : AppCompatActivity(), UserFormView {
             userFormPresenter?.onValidate(getFormRequest())
         }
     }
+
+    // Creating the form request
 
     private fun getFormRequest():UserFormDto {
 

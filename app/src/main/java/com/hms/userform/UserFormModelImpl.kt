@@ -6,6 +6,8 @@ import com.hms.utils.Validation
 
 class UserFormModelImpl private constructor(private val userFormModelListener:UserFormModelListener) : UserFormModel {
 
+    // Validating thr user input
+
     override fun onValidate(userFormDto: UserFormDto) {
 
         var errorMsg = ""
