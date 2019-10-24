@@ -11,19 +11,12 @@ class UserFormActivity : AppCompatActivity(), UserFormView {
 
     override fun onSuccess() {
 
-        Toast.makeText(this, getString(R.string.form_validation_success), Toast.LENGTH_SHORT).show()
+        showPopup(getString(R.string.alert_success_title), getString(R.string.form_validation_success))
     }
 
     override fun onFailure(errorMsg:String) {
 
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle(getString(R.string.alert_title))
-        builder.setMessage(errorMsg)
-        builder.setPositiveButton(getString(R.string.alert_btn_ok), { dialog, which ->
-            dialog.cancel()
-        })
-
-        builder.show()
+       showPopup(getString(R.string.alert_error_title), errorMsg)
     }
 
     private var userFormPresenter: UserFormPresenter? = null
@@ -52,5 +45,17 @@ class UserFormActivity : AppCompatActivity(), UserFormView {
                                         et_email.text.toString())
 
         return userFormDto
+    }
+
+    private fun showPopup(title: String, msg:String) {
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+        builder.setMessage(msg)
+        builder.setPositiveButton(getString(R.string.alert_btn_ok), { dialog, which ->
+            dialog.cancel()
+        })
+
+        builder.show()
     }
 }
